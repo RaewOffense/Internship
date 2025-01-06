@@ -26,7 +26,7 @@ class IceCream:
             reader =csv.reader(menu)
             for row in reader:
                 key, flavor, price =row
-                print(f"{key} : {flavor} - Rs.{price}")
+                print(f"{key:<10} : {flavor:<20} - Rs.{price}"+"\n")
         print("\n"+"*"*60)
     
     def buy_iceCream(self):

@@ -54,12 +54,6 @@ class Ice_Cream:
 
     def buy_IceCream(self):
         while True:
-            if self.totalCones == 0:
-                print("\n Sorry,We are out of Stock!")
-                self.bill() 
-                self.display_bill()
-                break
-
             print("\n Welcome to Ice Cream Shop!!!\n")
             self.show_List_of_IceCream()
             choice  =  input("Which Flavor of Ice Cream Do You Want to Buy (or type 'exit' to leave)?:")
@@ -88,7 +82,7 @@ class Ice_Cream:
 
                     total = no_of_IceCream * price
                     self.totalPrice += total
-                    remainingCones = self.totalCones - no_of_IceCream
+                    self.totalCones -= no_of_IceCream
                     self.buyItems.append([flavor, no_of_IceCream, price, total])
                     print(f"Remaining cones in stock: {remainingCones}\n")
 
@@ -98,6 +92,12 @@ class Ice_Cream:
                     self.bill() 
                     self.display_bill() 
                     break
+                if self.totalCones == 0:
+                    print("\n Sorry,We are out of Stock!")
+                    self.bill() 
+                    self.display_bill()
+                    break
+
             else:
                 print("\nInvalid choice! Please select a valid option.")
 
