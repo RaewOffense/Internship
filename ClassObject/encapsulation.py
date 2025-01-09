@@ -4,10 +4,21 @@ class Student:
     def __init__(self,name,address,email):
         self.name = name
         self.address = address
-        self.__email = email
+        self.email = email
+    def show(self):
+        print(f"{self.name} {self.email} {self.address}")
+
     
-    def student_detail(self):
+    def _student_detail(self):
         print(self.name)
         print(self.address)
-        print(self.__email)
-student =Student("Rajesh","banke","rajesh@gmail.com")
+        print(self.email)
+
+class Student1 (Student):
+    def display(self):
+        self.show()
+        self._student_detail()
+        
+stud =Student1("Rajesh","banke","rajesh@gmail.com")
+
+stud.display()
