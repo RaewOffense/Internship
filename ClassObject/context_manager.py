@@ -13,10 +13,3 @@ class ContextManager:
         self.file.close()
     
 
-with ContextManager("demo.csv","w") as file:
-    file.write("Hello developer")
-
-
-with ContextManager("demo.txt","r") as file:
-    result = file.read()
-    print(result)
