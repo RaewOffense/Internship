@@ -1,4 +1,2 @@
-Name,Address,Age
-Rajesh,Banke,22
-Name,Address,Age
-Subash,Kathmandu,18
+StudentID,Name,Address,Age
+15193,Dipesh,Dang,21
